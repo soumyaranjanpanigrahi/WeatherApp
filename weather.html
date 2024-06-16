@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather site</title>
+    <link rel="stylesheet" href="weather.css">
+
+</head>
+
+<body>
+    <div class="weather-app">
+        <div class="container">
+            <h3 class="brand">The weather</h3>
+            <div>
+                <div>
+                    <h1 class="temp"></h1>
+                    <div class="minmax"></div>
+                </div>
+
+                <div class="city-time">
+                    <h1 class="name">Location</h1>
+                    <small>
+                        <span class="windss">
+                            <img src="winds-weather-symbol.png" alt="wind">
+
+                        </span>
+                        <span class="winds">Wind Speed</span>
+
+                        <span class="humid">
+                            <img src="humid.png" alt="humid">
+
+                        </span>
+                        <span class="humids">Humidity</span>
+                    </small>
+                </div>
+                <div class="weather">
+                    <img src="clear.png" class="icon" alt=" ">
+                    <span class="condition"></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="srh">
+                <input type="text" class="search" placeholder="Search Location..">
+                <button type="submit" class="submit">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </div>
+
+            <ul class="details">
+                <h4>Weather Details</h4>
+
+                <li>
+                    <span>Humidity</span>
+                    <span class="humidity">--</span>
+
+                </li>
+                <li>
+                    <span>Wind speed</span>
+                    <span class="wind">--</span>
+
+                </li>
+                <li>
+                    <span>Real feel</span>
+                    <span class="feel">--</span>
+                </li>
+                <li>
+                    <span>Min.Temp</span>
+                    <span class="MinTemp">--</span>
+
+                </li>
+                <li>
+                    <span>Max.Temp</span>
+                    <span class="MaxTemp">--</span>
+
+                </li>
+                <li>
+                    <span>Pressure</span>
+                    <span class="pressure">--</span>
+
+                </li>
+                <li>
+                    <span>Visibility</span>
+                    <span class="visibility">--</span>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="weather.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

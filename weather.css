@@ -1,0 +1,205 @@
+img{
+    width: 50px;
+    height: 50px;
+}
+body{
+    font-family:'Times New Roman', Times, serif;
+    background: rgb(45, 44, 44)
+}
+*{
+    box-sizing: border-box;
+}
+
+h1,h3{
+    font-weight: 400;
+}
+.weather-app{
+    min-height: 100vh;
+    background-image: url(./frank-mckenna-eXHeq48Z-Q4-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    color: white;
+    opacity: 0.8;
+    transition: 1000ms;    
+}
+
+.weather-app::before{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+.container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2em 3em 4em 3em;
+
+}
+.container >div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel{
+    height: 100%;
+    width: 40%;
+    top: 0;
+    right: 0;
+    background: rgb(110, 110, 110,0.3);
+    position: absolute;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    padding: 50px 40px;
+    overflow-y: scroll;
+}
+.city-time,
+.temp,
+.weather{
+    margin: 1em 2em;
+}
+.city-time h1{
+    font-size: 5em;
+    margin-bottom: 0.3em;
+    margin: 0;
+}
+.humid{
+    padding-left: 30px;
+}
+.temp{
+    font-size: 5em;
+    margin: 0;
+}
+.city-time h1{
+    text-align: center;
+}
+.weather{
+    font-size: 30px;
+}
+.weather img{
+    display: block;
+    margin: 0.3em 0;
+}
+.panel div{
+    margin-bottom: 50px;
+}
+.panel ul{
+    display: none;
+    margin: 2em;
+    padding: 0 0 2em 0;
+    list-style: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+.panel ul li{
+    color: white;
+    margin: 20px 0;
+}
+.panel ul h4{
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+.submit{
+    position: relative;   
+    padding:0.8em;   
+    color: white;
+    background:black;
+    cursor: pointer;
+    
+    font-size: 12px;
+    box-shadow: 0px 2px 0.5px grey;
+}
+button{
+    border-radius: 50%;
+    border: none;
+    margin-bottom: 4px;
+    
+}
+.submit:hover{
+    background-color: white;
+    color: black;
+}
+.search{
+    height: 31px;
+    width: 180px;
+    position: relative;
+    font-size: 1.2em;
+    background: transparent;
+    color: white;
+    box-shadow: 0px 2px 0.5px rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 0 1.5em 0.4em 0;
+    transition: 0.8s;
+}
+.search:hover{
+    width: 360px;
+    cursor: pointer;
+    
+}
+.srh input{
+    border-radius: 4px;
+    padding: 0px 10px 0px 5px;
+    backdrop-filter: blur(10px);
+}
+.srh input::placeholder{
+    color: white;
+    font-weight: 200px;
+    transform: translateX(5px);
+    background-color: transparent;
+    
+}
+.search:focus{
+    outline: none;
+}
+.details li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.details h4{
+    text-align: center;
+}
+@media (max-width: 800px){
+    .panel,.container{
+        position: relative;
+        width: 100%;
+        top: initial;
+    }
+}
+@media (max-width: 500px){
+    html{
+        font-size: 15px;
+    }
+}
+@media (max-width: 300px){
+    .weather-app{
+        min-height: 40em;
+    }
+}
+.winds{
+    font-size: 2em;
+    padding-left: 10px;
+}
+.humids{
+    font-size: 2em;
+    padding-left: 10px;
+      
+}.minmax{
+    font-size: 20px;
+    padding-left: 15px;
+}
